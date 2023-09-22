@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using AspNetCoreWebApp.Models;
 
 namespace AspNetCoreWebApp.Data
 {
@@ -9,5 +10,6 @@ namespace AspNetCoreWebApp.Data
             : base(options)
         {
         }
+        public DbSet<AspNetCoreWebApp.Models.Movie> Movie { get; set; } = default!;
     }
 }
